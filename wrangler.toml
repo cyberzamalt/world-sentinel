@@ -1,0 +1,12 @@
+name = "world-sentinel"
+main = "worker.js"
+compatibility_date = "2025-11-08"
+workers_dev = true
+
+[vars]
+API_KEY = "1234abc"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "ws-db"
+database_id = "REPLACE_WITH_YOUR_D1_ID"
