@@ -9,4 +9,4 @@ API_KEY = "1234abc"
 [[d1_databases]]
 binding = "DB"
 database_name = "ws-db"
-database_id = "REPLACE_WITH_YOUR_D1_ID"
+database_id = "1d02cde3-16e3-4be8-bd6e-e56f5564a49a"
