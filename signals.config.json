@@ -1,0 +1,26 @@
+{
+  "window_hours": 24,
+  "volume_sigma_orange": 2.0,
+  "volume_sigma_rouge": 3.0,
+  "sentiment_orange": { "min": -1, "max": -0.5 },
+  "sentiment_rouge":  { "min": -1, "max": -0.8 },
+  "positive_orange":  { "min":  0.5, "max":  1.0 },
+  "positive_rouge":   { "min":  0.8, "max":  1.0 },
+  "families": {
+    "energie":  ["opec","opep","oil","pétrole","gaz","pipeline","raffinerie","énergie","blackout","electricity"],
+    "banques":  ["bce","ecb","fed","taux","rate","qe","qt","liquidity","bank","banque","credit"],
+    "tech":     ["ai","chip","semi","nvidia","intel","export control","data center","cloud","software"],
+    "auto":     ["tesla","toyota","volkswagen","voiture","automobile","ev","battery"],
+    "crypto":   ["bitcoin","crypto","ethereum","binance","coinbase","wallet","hack","listing","delisting"],
+    "reg":      ["sec","amf","esma","antitrust","sanction","embargo","tariff","droit de douane","ban","enquête"],
+    "social":   ["strike","grève","protest","manifestation","blocage","syndicat"],
+    "geo":      ["war","guerre","ceasefire","cessez-le-feu","attaque","missile","otan","onu"]
+  },
+  "whitelist_officielles": [
+    "White House","Federal Reserve","U.S. Treasury","U.S. Commerce",
+    "European Commission","European Central Bank","ECB","BCE","ESMA","AMF",
+    "OPEC","IEA","RTE","CRE",
+    "United Nations","UN","NATO","OTAN","IMF","World Bank","Banque mondiale",
+    "Elysée","Matignon","Ministère"
+  ]
+}
