@@ -1,12 +1,27 @@
+# wrangler.toml — World Sentinel
 name = "world-sentinel"
 main = "worker.js"
-compatibility_date = "2025-11-08"
-workers_dev = true
+compatibility_date = "2025-11-07"
 
-[vars]
-API_KEY = "1234abc"
+# Servez les fichiers de l’UI (le dossier /app du dépôt)
+[assets]
+directory = "app"
 
+# Déclencheur CRON (5h00 UTC tous les jours)
+[triggers]
+crons = ["0 5 * * *"]
+
+# Liaison D1 (utilisé par env.DB dans le code)
 [[d1_databases]]
-binding = "DB"
+binding = "DB"             # DOIT s'appeler DB (le code l'utilise)
 database_name = "ws-db"
-database_id = "1d02cde3-16e3-4be8-bd6e-e56f5564a49a"
+# >>> Optionnel mais conseillé pour 'wrangler deploy' en local :
+# database_id = "1d02cde3-16e3-4be8-bd6e-e5675564a9fa"  # ← remplace par ton UUID D1
+
+# (facultatif) Variables "build" si tu déploies via GitHub Builds
+# Cloudflare Dashboard → Settings → Build → Variables and secrets
+# API_KEY = "ta_clé_admin"
+# D1_DATABASE = "ws-db"
+
+# Si tu veux aussi pousser des SECRETS en local (ex: wrangler secret put API_KEY),
+# le code lit soit env.SECRETS.get("API_KEY") (Secrets Store), soit env.API_KEY (secret classique).
